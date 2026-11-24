@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
+  <title>Білім нарығы — бәсеке және монополия викторинасы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 19h18M5 16l5-5 3 3 6-8"></path>
+            <path d="M15 6h4v4"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-name">Білім нарығы</div>
+          <div class="brand-caption">Күрделі тақырыптар туралы</div>
+        </div>
+      </div>
+      <div class="offline-pill">Желіден тыс жұмыс істейді</div>
+    </header>
+
+    <section class="card" aria-live="polite">
+      <div id="quiz-screen">
+        <div class="intro-row">
+          <p class="eyebrow">Интерактивті викторина</p>
+          <div class="counter"><strong id="current-number">01</strong> / 20</div>
+        </div>
+        <h1>Бәсеке<br>және монополиялар</h1>
+        <p class="subtitle">Нарықтардың құрылымы, нарықтық түрлер және бәсекенің маңызы туралы біліміңізді тексеріңіз.</p>
+
+        <div class="progress-meta">
+          <span>Сіздің үлгеріміңіз</span>
+          <span id="progress-label">Сұрақ 1 / 20</span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Викторина барысы" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="question-block" id="question-block">
+          <p class="question-label" id="question-category"></p>
+          <h2 id="question-text"></h2>
+          <div class="answers" id="answers"></div>
+        </div>
+        <div class="feedback" id="feedback" role="status" hidden>
+          <span class="feedback-icon" id="feedback-icon" aria-hidden="true"></span>
+          <div class="feedback-copy" id="feedback-copy"></div>
+        </div>
+        <div class="action-row">
+          <button class="primary-button" id="next-button" type="button" hidden>
+            Келесі сұрақ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="result-screen" class="result-screen" hidden>
+        <div class="result-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m8 12 3 3 5-6"></path>
+            <path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Z"></path>
+          </svg>
+        </div>
+        <p class="eyebrow">Викторина аяқталды</p>
+        <h2 id="result-title">Тамаша жұмыс!</h2>
+        <p class="result-description" id="result-description"></p>
+        <div class="score-circle" aria-label="Дұрыс жауаптардың пайызы">
+          <span class="score-percent" id="score-percent">0%</span>
+          <span class="score-caption">дұрыс жауап</span>
+        </div>
+        <div class="result-stats">
+          <div class="stat"><span class="stat-value" id="correct-count">0</span><span class="stat-label">Дұрыс</span></div>
+          <div class="stat"><span class="stat-value" id="wrong-count">0</span><span class="stat-label">Қате</span></div>
+          <div class="stat"><span class="stat-value" id="score-points">0 / 20</span><span class="stat-label">Ұпай</span></div>
+        </div>
+        <button class="primary-button" id="restart-button" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 12a9 9 0 1 0 2.64-6.36L3 8"></path>
+            <path d="M3 3v5h5"></path>
+          </svg>
+          Қайта өту
+        </button>
+      </div>
+    </section>
+    <p class="footer-note">20 сұрақ · 3 жауап нұсқасы · Асықпай — тек білім</p>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
